@@ -1,0 +1,199 @@
+.height1 {
+    height: 100vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: black;
+    --text-color: #fff;
+    --main-color: #FE64A3;
+    --neon-box-shadow: 0 0 .8 #12f7ff;
+    --neon-font-shadow: 0 0 10px #FE64A3, 0 0 20px #FE64A3,
+        0 0 60px #FE64A3;
+
+    --big-font: 4.8rem;
+    --p-font: 1.1rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* utility classes  */
+.bigFont{
+    font-size: 4rem;
+}
+.marginTop{
+    position: relative;
+    top: 2rem;
+}
+.marginBottom{
+    position: relative;
+    bottom: 2rem;
+}
+
+/* navigation bar  */
+.navigation {
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.navigation a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 25px;
+    transition: all ease .50s;
+    animation: slideAnimation 1s ease forwards;
+}
+
+.navigation a:hover {
+    color: var(--main-color);
+}
+
+.navigation a.active {
+    color: var(--main-color);
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.container .glowBtn {
+    display: inline-block;
+    padding: 14px 34px;
+    background:white;
+    color: black;
+    border: 2px solid var(--main-color);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all .2s ease-in-out;
+    margin: 0px 5px;
+    box-shadow: 0 0 20px var(--main-color);
+    cursor: pointer;
+}
+
+.container .glowBtn:hover {
+    transform: translateY(-5px);
+    background: black;
+    color: var(--main-color);
+}
+/* home  */
+.home-img {
+    width: 450px;
+    height: 350px;
+    box-shadow: 0 0 35px hotpink;
+    border-radius: 50%;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    animation: topToBottom 3s ease forwards;
+    /* box-shadow: 0 0 25px ; */
+    border-radius: 50%;
+}
+.home-text {
+    animation: slideAnimation 1s ease forwards;
+}
+/* project section  */
+.project-content .row1 div img{
+width: 200px;
+height: 200px;
+border-radius: 26px;
+box-shadow: 0 0 35px hotpink;
+}
+.project-content .row1 div img:hover{
+  position: relative;
+bottom: 4px;
+width: 210px;
+height: 210px;
+}
+.iconClick{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 2px solid palevioletred;
+    border-radius: 8px;
+    width: 6rem;
+    text-align: center;
+    padding: 3px 4px;
+    box-shadow: 0 0 23px #FE64A3;
+    margin: auto;
+}
+.iconClick:hover{
+color: white;
+background-color: black;
+box-shadow: 0 0 23px #FE64A3;
+}
+/* about section */
+.about-section div .image-section img{
+    height: 400px;
+    width: 300px;
+    margin: 40px 50px;
+    margin-right: -200px;
+    position: relative;
+    left: 100px;
+    bottom: -50px;
+    box-shadow: 0 0 35px pink;
+    z-index: 2;
+    outline: 2px dashed;
+    border-radius: 2px;
+}
+
+
+/* animation keyframes  */
+
+
+/* nav animation */
+@keyframes slideAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* pic animation */
+@keyframes topToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* skills animation */
+@keyframes anim{
+    100%{
+        stroke-dashoffset:175;
+    }
+}
+@keyframes anim2 {
+    100%{
+        stroke-dashoffset:125;
+    }
+}
+@keyframes anim3 {
+    100%{
+        stroke-dashoffset:225;
+    }
+}
